@@ -37,7 +37,7 @@ function validate() {
     var target = document.getElementById('input-box').value;
     if(target === "") {
         document.getElementById('input-box').style.borderBottom = '2px solid red';
-        console.log('toto');
+       
         
     }
 
@@ -50,7 +50,7 @@ function remBorder() {
    
         //target.style.border = 'none';
         document.getElementById('input-box').style.borderBottomColor = 'blue';
-        console.log('koko');
+       
    
 
 }
