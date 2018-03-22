@@ -2,9 +2,12 @@ function todo() {
     var ParentDiv = document.getElementById('mydiv');
     var newPara = document.createElement('p');
     var value = document.getElementById('input-box').value;
-    var newText = document.createTextNode(value);
+    //var newText = document.createTextNode(value);
+    var newText = document.createElement('span');
+    newText.innerHTML = value;
     var del = document.createElement('input');
-    randomId = Math.random();
+    
+    //randomId = Math.random();
     // newPara.setAttribute("id",randomId);
     newPara.setAttribute("class","para");
     del.setAttribute("type","button");
@@ -28,6 +31,28 @@ function delt(me) {
     grandParent.removeChild(parent);
     //console.log(grandParent);
     
+}
+
+function validate() {
+    var target = document.getElementById('input-box').value;
+    if(target === "") {
+        document.getElementById('input-box').style.borderBottom = '2px solid red';
+        console.log('toto');
+        
+    }
+
+    else {
+        todo();
+    }
+}
+
+function remBorder() {
+   
+        //target.style.border = 'none';
+        document.getElementById('input-box').style.borderBottomColor = 'blue';
+        console.log('koko');
+   
+
 }
 
 //delt();
